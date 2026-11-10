@@ -5,13 +5,13 @@
 class Okctl < Formula
   desc "Command-line interface for the Ownkube developer platform"
   homepage "https://github.com/ownkube/ownkube-cli"
-  version "0.6.3"
+  version "0.6.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.3/ownkube-cli_darwin_amd64.tar.gz"
-      sha256 "2611ae463bd7ddda4c84ff9009ed194021a487950e8ab2ebd714d906278a2e66"
+      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.4/ownkube-cli_darwin_amd64.tar.gz"
+      sha256 "5baf7f265f558ee1d8fdfab53d0968fd2ccd13ef2a323555facd50e8b108937c"
 
       define_method(:install) do
         bin.install "okctl"
@@ -19,8 +19,8 @@ class Okctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.3/ownkube-cli_darwin_arm64.tar.gz"
-      sha256 "420375d4acdcd1caa9c65bfc57431479f989d888b9cbb055148652b92739f353"
+      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.4/ownkube-cli_darwin_arm64.tar.gz"
+      sha256 "e542a144fc584f2743919ea8257d5811ecec06ecfee53240b2a9653b9d37ea54"
 
       define_method(:install) do
         bin.install "okctl"
@@ -31,16 +31,16 @@ class Okctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.3/ownkube-cli_linux_amd64.tar.gz"
-      sha256 "8e43d4c0766eeb16580a41890ed2f774148d993f3f35760605c61a20f4be4ab4"
+      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.4/ownkube-cli_linux_amd64.tar.gz"
+      sha256 "843687aaa6d8f40224fc528eb17a3d26694a10a6c9ed3332b3e5c763c29b2f60"
       define_method(:install) do
         bin.install "okctl"
         generate_completions_from_executable(bin/"okctl", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.3/ownkube-cli_linux_arm64.tar.gz"
-      sha256 "e7657c265164014fdfece9a350c4edee7f7f074b0f79b01291a85c8a354c1c1d"
+      url "https://github.com/ownkube/ownkube-cli/releases/download/v0.6.4/ownkube-cli_linux_arm64.tar.gz"
+      sha256 "cbdccd54a89c681eb92507fe6348de3cbb9b8e9598a2ae2a5de9379be63095b7"
       define_method(:install) do
         bin.install "okctl"
         generate_completions_from_executable(bin/"okctl", "completion")
